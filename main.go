@@ -13,7 +13,7 @@ func main() {
 	// var name string
 	// var ticketCount int
 
-	// fmt.Println("Enter your name: ")
+	// fmt.Println("Enter your name: ")x``
 	// fmt.Scan(&name)
 
 
@@ -31,9 +31,26 @@ func main() {
 	// var users [3] string
 
 	// slice size is dynamic
-	var users[]string
-	users = append(users, "Hamid")
-	users = append(users, "Amir")
+	// var users[]string
+	// users = append(users, "Hamid")
+	// users = append(users, "Amir")
 
-	fmt.Printf("Users are here: %v\n", users)
+	// fmt.Printf("Users are here: %v\n", users)
+
+	var users []string
+
+	for {
+		var name string
+		fmt.Println("Enter user or `exit`: ")
+		fmt.Scan(&name)
+		if (name == "exit") {
+			break
+		}
+		users = append(users, name)
+	}
+
+	for index, name := range users {
+		fmt.Print(index, name)
+	}
+
 }

@@ -32,3 +32,39 @@ var users[]string
 users = append(users, "Hamid")
 users = append(users, "Amir")
 ```
+
+### Conditions and Loops
+
+#### while
+
+The simplest loop in go is `for{}` which is eqivalant to `while(){}` in other languages.
+
+```
+
+var users []string
+
+for {
+    var name string
+    fmt.Println("Enter user or `exit`: ")
+    fmt.Scan(&name)
+    if (name == "exit") {
+        break
+    }
+    users = append(users, name)
+}
+
+fmt.Printf("%v\n", users)
+```
+#### foreach
+```
+for index, name := range users {
+    fmt.Print(index, name)
+}
+```
+You can simply left the `index` blank buy puttig `_` in its location:
+
+```
+for _, name := range users {
+    fmt.Print(name)
+}
+```
