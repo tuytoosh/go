@@ -49,8 +49,14 @@ func main() {
 		users = append(users, name)
 	}
 
-	for index, name := range users {
-		fmt.Print(index, name)
+	for _, name := range users {
+		fmt.Println(name)
 	}
 
+	bye("Hamid")
+}
+
+
+func bye(name string) {
+	fmt.Printf("Bye %v\n!", name)
 }

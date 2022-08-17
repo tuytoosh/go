@@ -68,3 +68,15 @@ for _, name := range users {
     fmt.Print(name)
 }
 ```
+
+## Functions
+Functions are very similar to other languages:
+```
+func bye(name string) {
+	fmt.Printf("Bye %v\n!", name)
+}
+```
+And for calling them:
+```
+bye("Hamid")
+```
